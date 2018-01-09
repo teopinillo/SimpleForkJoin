@@ -10,11 +10,11 @@ public class MyAction extends RecursiveAction {
 		 else {
 			RecursiveAction left = new MyAction(pounds / 2);
 			RecursiveAction right = new MyAction(pounds /2);
-			invokeAll(left,right);
-			//left.fork();
-			//right.fork();
-			//left.join();
-			//right.join();
+			//invokeAll(left,right);
+			left.fork();
+			right.fork();
+			left.join();
+			right.join();
 		}
 		
 	}
